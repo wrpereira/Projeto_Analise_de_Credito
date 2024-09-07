@@ -1,0 +1,66 @@
+CREATE SCHEMA `cap04` ;
+
+
+CREATE TABLE `cap04`.`TB_CLIENTES` (
+  `id_cliente` INT NULL,
+  `nome_cliente` VARCHAR(50) NULL,
+  `endereco_cliente` VARCHAR(50) NULL,
+  `cidade_cliente` VARCHAR(50) NULL,
+  `estado_cliente` VARCHAR(50) NULL);
+
+
+INSERT INTO `cap04`.`TB_CLIENTES` (`id_cliente`, `nome_cliente`, `endereco_cliente`, `cidade_cliente`, `estado_cliente`)
+VALUES (1, "Bob Silva", "Rua 67", "Fortaleza", "CE");
+
+INSERT INTO `cap04`.`TB_CLIENTES` (`id_cliente`, `nome_cliente`, `endereco_cliente`, `cidade_cliente`, `estado_cliente`)
+VALUES (2, "Ronaldo Azevedo", "Rua 64", "Campinas", "SP");
+
+INSERT INTO `cap04`.`TB_CLIENTES` (`id_cliente`, `nome_cliente`, `endereco_cliente`, `cidade_cliente`, `estado_cliente`)
+VALUES (3, "John Lenon", "Rua 42", "Rio de Janeiro", "RJ");
+
+INSERT INTO `cap04`.`TB_CLIENTES` (`id_cliente`, `nome_cliente`, `endereco_cliente`, `cidade_cliente`, `estado_cliente`)
+VALUES (4, "Billy Joel", "Rua 39", "Campos", "RJ");
+
+INSERT INTO `cap04`.`TB_CLIENTES` (`id_cliente`, `nome_cliente`, `endereco_cliente`, `cidade_cliente`, `estado_cliente`)
+VALUES (5, "Lady Gaga", "Rua 45", "Porto Alegre", "RS");
+
+
+CREATE TABLE TB_PEDIDOS (
+  id_pedido INT NULL,
+  id_cliente INT NULL,
+  id_vendedor INT NULL,
+  data_pedido DATETIME NULL,
+  id_entrega INT NULL);
+
+
+INSERT INTO TB_PEDIDOS (id_pedido, id_cliente, id_vendedor, data_pedido, id_entrega)
+VALUES (1001, 1, 5, now(), 23);
+
+INSERT INTO TB_PEDIDOS` (id_pedido`, `id_cliente`, `id_vendedor`, `data_pedido`, `id_entrega`)
+VALUES (1002, 1, 7, now(), 24);
+
+INSERT INTO `cap04`.`TB_PEDIDOS` (`id_pedido`, `id_cliente`, `id_vendedor`, `data_pedido`, `id_entrega`)
+VALUES (1003, 2, 5, now(), 23);
+
+
+CREATE TABLE `cap04`.`TB_VENDEDOR` (
+  `id_vendedor` INT NULL,
+  `nome_vendedor` VARCHAR(50) NULL);
+
+
+Em seguida, eu explorei quatro aspectos principais dos dados: a escolaridade, o salário anual, o estado civil e a quantidade e o valor das transações dos clientes.
+
+O salário anual dos clientes revelou que metade da base ganhava abaixo de 40k por ano, e que adimplentes e inadimplentes mantinham proporções similares nas faixas salariais. Por outro lado, os clientes com salários acima de 120k representavam quase 20% da base, o que demonstra a importância desse segmento para o banco.
+
+Com base nessa exploração de dados, eu pude extrair alguns insights sobre o perfil e o comportamento dos clientes do banco:
+
+Perfil do Cliente: Predomínio de mulheres casadas, entre 25 e 40 anos, com ensino médio completo. Salário anual médio: R$ 50.000,00.
+Comportamento do Cliente: Média de 2,5 produtos por cliente. 40 transações por ano, com valor médio de R$ 1.000,00.
+Inatividade do Cliente: 500 clientes inativos há 12 meses. Sem correlação significativa com salário anual ou limite de crédito.
+Esses insights podem ser usados para desenvolver estratégias de marketing e fidelização para o banco, visando aumentar a satisfação, a retenção e a rentabilidade dos clientes. Algumas recomendações que eu sugiro são:
+
+Implementar programas de fidelização para manter um relacionamento ativo com os clientes, incentivando o uso dos produtos e serviços do banco, e recompensando os clientes mais fiéis e rentáveis.
+Identificar e reativar os clientes inativos, entrando em contato com eles, entendendo as suas necessidades e expectativas, e apresentando soluções que possam resolver os seus problemas ou desafios financeiros.
+Ao desvendar esses padrões, podemos direcionar estratégias de marketing e fidelização, impulsionando o sucesso desta instituição financeira na era da tecnologia e análise de dados! 📈✨
+
+Espero que você tenha gostado desta publicação, e que ela tenha te inspirado a explorar os dados e gerar insights valiosos para o seu negócio ou carreira. Se você quiser saber mais sobre o meu trabalho, me siga no LinkedIn ou entre em contato comigo. Eu adoraria conversar com você e trocar experiências. Obrigado pela atenção! 😊
